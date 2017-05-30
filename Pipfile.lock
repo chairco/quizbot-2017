@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "8c17c3cc25cf4924f35567289dfa80339777898929a5469acb674416d06c0cce"
+            "sha256": "00c0a2c65e8856ce19f4a511324e40eef4db7f5f5793c2c3ee48bb2f7a205a8d"
         },
         "requires": {},
         "sources": [
@@ -12,6 +12,12 @@
         ]
     },
     "default": {
+        "certifi": {
+            "version": "==2017.4.17"
+        },
+        "chardet": {
+            "version": "==3.0.3"
+        },
         "click": {
             "version": "==6.7"
         },
@@ -20,6 +26,9 @@
         },
         "flask": {
             "version": "==0.12.2"
+        },
+        "idna": {
+            "version": "==2.5"
         },
         "itsdangerous": {
             "version": "==0.24"
@@ -38,6 +47,12 @@
         },
         "pyyaml": {
             "version": "==3.12"
+        },
+        "requests": {
+            "version": "==2.17.3"
+        },
+        "urllib3": {
+            "version": "==1.21.1"
         },
         "werkzeug": {
             "version": "==0.12.2"
