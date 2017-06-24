@@ -13,7 +13,7 @@ from quizzler import users
 from quizzler import registrations
 
 from .messages import MessageGetter
-
+from .email_regexp import VALID_ADDRESS_REGEXP
 
 logger = logging.getLogger(__name__)
 
@@ -236,10 +236,13 @@ def post_facebook_message(fbid, recevied_message, q=None):
         return 0
 
     if im.is_registration_session_active(im_type='fb', im_id=str(fbid)):
+        '''
         match = re.match(
             '^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$',
             str(recevied_message)
         )
+        '''
+        match = re.match(VALID_ADDRESS_REGEXP, str(recevied_message))
         if match == None:
             api.send_text_message('不合法的信箱，請重新輸入')
         else:
