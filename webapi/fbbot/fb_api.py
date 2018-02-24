@@ -100,7 +100,7 @@ def post_facebook_message(fbid, recevied_message, q=None):
     if q is None:
         q = []
     else:
-        q = q
+        q = list(q)  #if is mutable, will copy it.
 
     api = MessengerAPI(fbid)
     msg = MessageGetter(types=recevied_message.split('_')[0])
